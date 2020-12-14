@@ -4,7 +4,7 @@ var gamePattern = [];
 var userClickedPattern = [];
 var notStarted = true;
 var level = 1;
-var running = false;
+var running = true;
 
 $(document).keypress(function(){
   /*
