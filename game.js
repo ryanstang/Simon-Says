@@ -118,7 +118,6 @@ function checkAnswer(currentLevel){
     // play wrong sound
     var audio = new Audio("sounds/wrong.mp3");
     audio.play();
-    
     running = true;
 
     // add wrong style to body
