@@ -5,6 +5,7 @@ var userClickedPattern = [];
 var notStarted = true;
 var level = 1;
 var running = true;
+var highscore = 0;
 
 $(document).keypress(function(){
   /*
@@ -129,7 +130,10 @@ function checkAnswer(currentLevel){
 
     $("#level-title").text("Game Over!");
     $(".subtitle").text("Press Any Key To Restart.");
-    $(".highscore").text("Highscore: " + (level - 2));
+    if ((level - 2) > highscore){
+      highscore = level - 2;
+      $(".highscore").text("Highscore: " + highscore);
+    }
     startOver();
   }
 }
